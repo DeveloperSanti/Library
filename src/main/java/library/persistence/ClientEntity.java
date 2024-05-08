@@ -21,4 +21,10 @@ public class ClientEntity {
 
     private String email;
 
+    private Long loanId;
+
+    @ManyToOne
+    @JoinColumn(name = "loanId", insertable = false, updatable = false)
+    private LoanEntity loan;
+
 }

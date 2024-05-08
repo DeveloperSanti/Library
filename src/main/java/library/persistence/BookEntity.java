@@ -14,13 +14,8 @@ public class BookEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookId;
 
-    private Long authorId;
-
     @Column(nullable = false)
     private String title;
-
-    @Column(nullable = false)
-    private String author;
 
     @Column(nullable = false)
     private String editorial;
@@ -41,8 +36,13 @@ public class BookEntity {
 
     private int pages;
 
+    private Long loanId;
+
     @ManyToOne
     @JoinColumn(name = "authorId", insertable = false, updatable = false)
-    private AuthorEntity authorEntity;
+    private AuthorEntity author;
 
+    @ManyToOne
+    @JoinColumn(name = "loanId", insertable = false, updatable = false)
+    private LoanEntity loan;
 }
