@@ -1,4 +1,4 @@
-package library.persistence;
+package library.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
