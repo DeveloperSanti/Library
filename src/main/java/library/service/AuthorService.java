@@ -12,7 +12,7 @@ public interface AuthorService {
 
     ResponseEntity<Object> getAuthorById(Long authorId);
 
-    ResponseEntity<Object> getAuthorByName(String authorName);
+    ResponseEntity<Object> findByName(String authorName);
 
     ResponseEntity<Object> saveAuthor(AuthorEntity author);
 

@@ -3,6 +3,7 @@ package library.persistence.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -17,7 +18,7 @@ public class AuthorEntity {
     @Column(nullable = false)
     private String authorName;
 
-    @OneToMany(mappedBy = "author")
-    private List<BookEntity> books;
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BookEntity> books = new ArrayList<>();
 
 }
