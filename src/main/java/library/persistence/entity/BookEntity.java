@@ -43,6 +43,6 @@ public class BookEntity {
     private AuthorEntity author;
 
     @ManyToOne
-    @JoinColumn(name = "loanId", insertable = false, updatable = false)
+    @JoinColumn(name = "loanId")
     private LoanEntity loan;
 }
