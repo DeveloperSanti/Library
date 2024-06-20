@@ -39,7 +39,7 @@ public class BookEntity {
     private Long loanId;
 
     @ManyToOne
-    @JoinColumn(name = "authorId", insertable = false, updatable = false)
+    @JoinColumn(name = "authorId")
     private AuthorEntity author;
 
     @ManyToOne
