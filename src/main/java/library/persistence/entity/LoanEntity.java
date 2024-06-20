@@ -15,8 +15,10 @@ public class LoanEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long loanId;
 
+    @Temporal(TemporalType.DATE)
     private Date dateDelivery;
 
+    @Temporal(TemporalType.DATE)
     private Date dateReturn;
 
     private Boolean returned;
